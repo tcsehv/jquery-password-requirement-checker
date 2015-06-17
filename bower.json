@@ -8,7 +8,7 @@
   "description": "A plugin to check if a password complies to certain requirements",
   "main": "src/jquery.password-requirements-checker.js",
   "dependencies": {
-    "jquery": "~2.0"
+    "jquery": "~2.1.0"
   },
   "keywords": [
     "jquery",

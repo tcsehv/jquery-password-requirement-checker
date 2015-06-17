@@ -1,5 +1,5 @@
 /*
- *  jquery-password-requirement-checker - v1.0.0
+ *  jquery-password-requirement-checker - v1.0.2
  *  A jQuery plugin to check if a password complies to certain requirements.
  *  https://theconceptstore.nl
  *
