@@ -1,17 +1,20 @@
 {
-	"name": "jquery-password-requirement-checker",
-	"version": "1.0.0",
-	"homepage": "http://jqueryboilerplate.com",
-	"authors": [
-		"Tijs van Erp <t.vanerp@theconceptstore.nl>"
-	],
-	"description": "A plugin to check if a password complies to certain requirements",
-	"main": "src/jquery.password-requirements-checker.js",
-	"keywords": [
-		"jquery",
-		"plugin",
-		"password",
-		"jquery-plugin"
-	],
-	"license": "MIT"
+  "name": "jquery-password-requirement-checker",
+  "version": "1.0.0",
+  "homepage": "http://jqueryboilerplate.com",
+  "authors": [
+    "Tijs van Erp <t.vanerp@theconceptstore.nl>"
+  ],
+  "description": "A plugin to check if a password complies to certain requirements",
+  "main": "src/jquery.password-requirements-checker.js",
+  "dependencies": {
+    "jquery": "~2.0"
+  },
+  "keywords": [
+    "jquery",
+    "plugin",
+    "password",
+    "jquery-plugin"
+  ],
+  "license": "MIT"
 }
