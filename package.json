@@ -1,6 +1,6 @@
 {
   "name": "jquery-password-requirement-checker",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A jQuery plugin to check if a password complies to certain requirements.",
   "keywords": [
     "jquery-plugin",
