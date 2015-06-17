@@ -50,7 +50,6 @@
             $this.prepareAmounts();
             $this.runValidations(element);
 
-
             element.keyup(function () {
                 $this.runValidations(element);
             });
@@ -61,7 +60,7 @@
             var $this = this;
             var validations = {};
 
-            validations.length = ($this.validateLength(fieldValue));
+            validations.length = $this.validateLength(fieldValue);
 
             $.each($this.getRegexList(), function (key, value) {
                 validations[key] = $this.validateRegex(key, value, fieldValue);
@@ -116,7 +115,7 @@
             });
         },
         writeAmount: function(key, value) {
-            $("." + this.getValidationClass(key) + " " + this.getValidationClass("amount")).html(value);
+            $("." + this.getValidationClass(key) + " ." + this.getValidationClass("amount")).html(value);
         }
     });
 

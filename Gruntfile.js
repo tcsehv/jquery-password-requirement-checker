@@ -43,7 +43,9 @@ module.exports = function(grunt) {
 				dest: "dist/jquery.password-requirements-checker.min.js"
 			},
 			options: {
-				banner: "<%= meta.banner %>"
+				banner: "<%= meta.banner %>",
+                mangle: true
+
 			}
 		},
 
