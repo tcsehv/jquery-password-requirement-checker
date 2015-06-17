@@ -1,0 +1,44 @@
+{
+  "name": "jquery-password-requirement-checker",
+  "version": "1.0.0",
+  "description": "A jQuery plugin to check if a password complies to certain requirements.",
+  "keywords": [
+    "jquery-plugin",
+    "jquery",
+    "password",
+    "plugins"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tcsehv/jquery-password-requirement-checker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tcsehv/jquery-password-requirement-checker/issues"
+  },
+  "author": {
+    "name": "Tijs van Erp",
+    "email": "t.vanerp@theconceptstore.nl",
+    "url": "https://github.com/tcsehv"
+  },
+  "homepage": "https://theconceptstore.nl",
+  "contributors": [
+    {
+      "name": "Tijs van Erp",
+      "email": "t.vanerp@theconceptstore.nl",
+      "url": "https://github.com/tcsehv"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-cli": "~0.1.13",
+    "grunt-contrib-coffee": "^0.12.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-jshint": "^0.11.0",
+    "grunt-contrib-uglify": "^0.8.0",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "scripts": {
+    "test": "grunt travis --verbose"
+  }
+}
