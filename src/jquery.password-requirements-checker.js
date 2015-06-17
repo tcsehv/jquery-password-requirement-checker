@@ -3,7 +3,7 @@
     "use strict";
 
     // Create the defaults once
-    var pluginName = "psswrdStrngth",
+    var pluginName = "passwordRequirements",
         defaults = {
             minAmounts: {
                 "upperCase": 1,
