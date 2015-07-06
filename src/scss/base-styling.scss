@@ -1,0 +1,44 @@
+$iconFont: "Glyphicons Halflings" !default;
+$invalidIcon: "\e014" !default;
+$validIcon: "\e013" !default;
+
+/* Setup several display/hide states */
+.password-req-checker,
+.password-req-checker.show-invalid-fields .valid {display: none;}
+
+.password-req-checker.active,
+.password-req-checker.show-invalid-fields {
+    display: block;
+}
+
+/* Base setup inline icons after specified requirements */
+.password-req-checker.dirty .valid:after,
+.password-req-checker.dirty .invalid:after,
+.password-req-checker.show-invalid-fields .invalid:after{
+    font-family: $iconFont;
+    margin-left: .5rem;
+    display: inline-block;
+    font-size: .95rem;
+    margin-top: 2px;
+}
+
+/* Setup .form-group wrapper for indicator icons */
+.form-group {position: relative;}
+
+.form-group.invalid:after,
+.form-group.valid:after {
+    font-family: $iconFont;
+    display: block;
+    position: absolute;
+    bottom: .25rem;
+    right: 3rem;
+    font-size: 2rem;
+}
+
+/* Set icons and colors */
+.password-req-checker.dirty .valid:after,
+.form-group.valid:after {content: $validIcon; color: green;}
+
+.password-req-checker.dirty .invalid:after,
+.form-group.invalid:after,
+.password-req-checker.show-invalid-fields .invalid:after {content: $invalidIcon; color: red;}

@@ -3,56 +3,57 @@
 <head>
     <meta charset="utf-8">
     <title>Password requirement checker</title>
+
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">
-    <style type="text/css" rel="stylesheet">
-        .invalid {
-            padding-left:22px;
-            line-height:24px;
-            color:#ec3f41;
-        }
-        .valid {
-            padding-left:22px;
-            line-height:24px;
-            color:#3a7d34;
-        }
-    </style>
+
+    <!-- Setup base-styling for the password requirements checker -->
+    <link href="../dist/css/base-styling.css" rel="stylesheet">
 </head>
 
 <body>
 <div class="container">
-    <h1>Password requirements checker</h1>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2 class="text-center">Password requirements checker</h2>
 
-    <form id="form" name="form">
-            <div class="form-group">
-                <label for="password" class="control-label required">Password</label>
-                <input type="text" name="password" id="password" value="" class="form-control">
-            </div>
-            <div id="pswd_info">
-                <h4>Password must meet the following requirements:</h4>
-                <ul>
-                    <li class="invalid lowercase">At least <strong><span class="amount">1</span> character</strong></li>
-                    <li class="invalid uppercase">At least <strong><span class="amount">1</span> upper case character</strong></li>
-                    <li class="invalid numbers">At least <strong><span class="amount">1</span> number</strong></li>
-                    <li class="invalid specialchars">At least <strong><span class="amount">1</span> special character</strong></li>
-                    <li class="invalid length">Be at least <strong><span class="amount">8</span> characters</strong></li>
-                </ul>
-            </div>
-    </form>
-
+            <form id="form" name="form">
+                <div class="form-group">
+                    <label for="password" class="control-label required">Password</label>
+                    <input type="text" name="password" autofocus id="password" placeholder="Fill in this field to check the plugin" value="" class="form-control">
+                </div>
+                <div class="password-req-checker well">
+                    <h4>Password must meet the following requirements:</h4>
+                    <ul>
+                        <li class="invalid lowercase">At least <strong><span class="amount">1</span> lower case character(s)</strong></li>
+                        <li class="invalid uppercase">At least <strong><span class="amount">1</span> upper case character(s)</strong></li>
+                        <li class="invalid numbers">At least <strong><span class="amount">1</span> number(s)</strong></li>
+                        <li class="invalid specialchars">At least <strong><span class="amount">1</span> special character(s)</strong></li>
+                        <li class="invalid length">At least <strong><span class="amount">8</span> total characters</strong></li>
+                    </ul>
+                </div>
+                <!-- Another input field to display the -->
+                <div class="form-group">
+                    <label for="email" class="control-label required">Email</label>
+                    <input type="email" name="email" id="email" value="" placeholder="Just another field to display the blur validation state" class="form-control">
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
-<!-- /.container -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<!--<script src="js/bootstrap.min.js"></script>-->
-<script src="../src/jquery.password-requirements-checker.js"></script>
+<script src="../dist/js/jquery.password-requirements-checker.js"></script>
+
 <script>
     $(document).ready(function() {
+        // Init the plugin with demo values
         $("#password").passwordRequirements({
             minLength: 12
         });
     });
 </script>
+
 </body>
 </html>
