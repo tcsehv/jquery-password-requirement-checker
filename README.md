@@ -17,19 +17,29 @@ Installation with NPM:
 $ npm i jquery-password-requirement-checker
 ```
 
+## Base styling
+Please include 'base-styling.css' (See dist/css/base-styling.css) inside the head-tags of the HTML to add the necessary display classes (and icons) to the elements. We've included a SASS-file/Grunt setup if more styling customization is needed.
+
 ## Usage
 
 ```html
-<input type="text" name="password" id="password" value="">
-<h4>Password must meet the following requirements:</h4>
-<ul>
-    <li class="invalid lowercase">At least <strong><span class="amount"></span> character</strong></li>
-    <li class="invalid uppercase">At least <strong><span class="amount"></span> upper case character</strong></li>
-    <li class="invalid numbers">At least <strong><span class="amount"></span> number</strong></li>
-    <li class="invalid specialchars">At least <strong><span class="amount"></span> special character</strong></li>
-    <li class="invalid length">Be at least <strong><span class="amount"></span> characters</strong></li>
-</ul>
-<script src="dist/jquery.password-requirements-checker.js"></script>
+<form>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" value="">
+    </div>
+    <div class="password-req-checker">
+        <h4>Password must meet the following requirements:</h4>
+        <ul>
+            <li class="invalid lowercase">At least <strong><span class="amount">1</span> lower case character(s)</strong></li>
+            <li class="invalid uppercase">At least <strong><span class="amount">1</span> upper case character(s)</strong></li>
+            <li class="invalid numbers">At least <strong><span class="amount">1</span> number(s)</strong></li>
+            <li class="invalid specialchars">At least <strong><span class="amount">1</span> special character(s)</strong></li>
+            <li class="invalid length">At least <strong><span class="amount">8</span> total characters</strong></li>
+        </ul>
+    </div>
+</form>
+<script src="dist/js/jquery.password-requirements-checker.min.js"></script>
 ```
 ```javascript
 <script>
